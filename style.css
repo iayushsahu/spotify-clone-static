@@ -14,11 +14,6 @@
   --border-radius-card: 12px;
   --all-transitions: all ease-in-out 0.2s;
 }
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 /* body */
 body {
@@ -172,8 +167,6 @@ body > .body_header > .navbar {
 .profile_button_tag > .profile_img_div {
   height: 70%;
   width: 70%;
-  /* min-width: 30px;
-  min-height: 30px; */
   padding: 5px;
 }
 
@@ -327,7 +320,7 @@ body > .body_header > .navbar {
 .sidebar_playlist_div > .dynamic_playlist {
   background-color: var(--container-background-color);
   border-radius: var(--border-radius-card);
-  height: 70.5vh;
+  height: 73vh;
   overflow-y: scroll;
 }
 
@@ -617,5 +610,9 @@ body > .body_header > .navbar {
     height: 30px;
     width: 30px;
     font-size: 12px;
+  }
+
+  .main_div {
+    margin-top: 0px;
   }
 }

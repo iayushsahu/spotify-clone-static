@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- start head for containing additional information -->
+  <head>
+    <!-- meat tag for better responsiveness -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- title for identifying this website  -->
+    <title>Spotify - Web Player (clone)</title>
+
+    <!-- link main stylesheet  -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- link favicon for showing logo in browser tab -->
+    <link
+      rel="shortcut icon"
+      href="/Media/Icon/spotify-logo-ico.ico"
+      type="image/x-icon"
+    />
+    <!-- link font-awesome for all icons in website -->
+    <script
+      src="https://kit.fontawesome.com/e0d3b694ff.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <!-- start body here  -->
+  <body>
+    <!-- start header tag here -->
+    <header class="body_header">
+      <!-- start nav tag for navaigation menu -->
+      <nav class="navbar">
+        <!-- logo icon tag -->
+        <div class="left_div_main_logo">
+          <!-- inner logo div for better placement -->
+          <div class="logo_div">
+            <!-- a tag for linking logo -->
+            <a href="#" class="logo_link">
+              <!-- website logo -->
+              <img src="/Media/Icon/spotify-logo-png.png" alt="logo" />
+            </a>
+          </div>
+        </div>
+        <!-- search icon tag -->
+        <div class="med_div_search_icon">
+          <!-- anchor tag for home icon -->
+          <a href="#" class="home_icon">
+            <!-- home icon -->
+            <i class="fa-solid fa-house"></i>
+          </a>
+          <!-- div tag for search form -->
+          <div class="search_form_div">
+            <!-- form for containing search input tag -->
+            <form role="search" class="mid_search_form_div">
+              <!-- input tag for user input -->
+              <input
+                type="text"
+                placeholder="What do you want to listen to?"
+                name="search"
+                maxlength="800"
+              />
+            </form>
+            <!-- search icon for input tag -->
+            <div class="search_icon_div">
+              <!-- span tag for better placement  -->
+              <span class="search_icon_span">
+                <!-- font-awesome search icon  -->
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- profile icon tag -->
+        <div class="right_div_profile">
+          <!-- button for upgrade tag -->
+          <button class="upgrade_button_tag">Upgrade</button>
+          <!-- button for profile page -->
+          <div class="profile_button_tag">
+            <!-- div for profile image -->
+            <div class="profile_img_div">
+              <!-- profile image -->
+              <img src="/Media/Profile/ayush_pic.jpeg" alt="user image" />
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main_div">
+      <!-- aside tag for sidebar playlist -->
+      <aside class="sidebar_playlist_div">
+        <!-- div tag for fixed playlist  -->
+        <div class="fixed_playlist">
+          <ul>
+            <!-- user Library selection -->
+            <li>
+              <a href="#"
+                ><span
+                  ><svg
+                    role="img"
+                    height="16"
+                    width="16"
+                    class="Svg-ytk21e-0 jAKAlG collection-active-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M3 22a1 1 0 01-1-1V3a1 1 0 012 0v18a1 1 0 01-1 1zM15.5 2.134A1 1 0 0014 3v18a1 1 0 001 1h6a1 1 0 001-1V6.464a1 1 0 00-.5-.866l-6-3.464zM9 2a1 1 0 00-1 1v18a1 1 0 102 0V3a1 1 0 00-1-1z"
+                    ></path></svg></span
+                ><span>Your Library</span></a
+              >
+            </li>
+            <!-- option for user create playlist -->
+            <li>
+              <a href="#"
+                ><span
+                  ><svg
+                    role="img"
+                    height="15"
+                    width="15"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                    class="Svg-ytk21e-0 jAKAlG"
+                  >
+                    <path
+                      d="M15.25 8a.75.75 0 01-.75.75H8.75v5.75a.75.75 0 01-1.5 0V8.75H1.5a.75.75 0 010-1.5h5.75V1.5a.75.75 0 011.5 0v5.75h5.75a.75.75 0 01.75.75z"
+                    ></path></svg></span
+                ><span>Create Playlist</span></a
+              >
+            </li>
+            <!-- list of songs that user liked  -->
+            <li>
+              <a href="#"
+                ><span
+                  ><img
+                    src="/Media/Fixed_playlist/like_icon.jpeg"
+                    alt="liked" /></span
+                ><span>Liked Song</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- dynamic playlist that user play before  -->
+        <div class="dynamic_playlist">
+          <ul>
+            <li><a href="#">bollywood Hits</a></li>
+            <li><a href="#">English Romantic 💞</a></li>
+            <li><a href="#">Chill station</a></li>
+            <li><a href="#">Deep Focus 🌐</a></li>
+            <li><a href="#">Power Hour</a></li>
+            <li><a href="#">Heart Beats</a></li>
+            <li><a href="#">Gym Music 💪 </a></li>
+            <li><a href="#">bollywood Romantic</a></li>
+            <li><a href="#">Bollywood Lofi</a></li>
+            <li><a href="#">Best English Melody 👌</a></li>
+            <li><a href="#">Jatt Brothers</a></li>
+            <li><a href="#">Laal Singh Chadda</a></li>
+            <li><a href="#">Peaceful Music</a></li>
+            <li><a href="#">Anuv Jain</a></li>
+            <li><a href="#">Decode dil with Ekta</a></li>
+            <li><a href="#">Love Aaj kal ❣</a></li>
+            <li><a href="#">Ted talks daily</a></li>
+            <li><a href="#">Acoustic Love 🎸</a></li>
+            <li><a href="#">Dil ka sukoon</a></li>
+            <li><a href="#">Pov: you're in Love</a></li>
+            <li><a href="#">Love Aaj kal</a></li>
+            <li><a href="#">Ted talks daily</a></li>
+            <li><a href="#">Best for Night 💤</a></li>
+            <li><a href="#">Dil ka sukoon</a></li>
+            <li><a href="#">Pov: you're in Love</a></li>
+          </ul>
+        </div>
+      </aside>
+      <!-- down list for mobile devices -->
+      <footer class="footer_list_container">
+        <div class="footer_list">
+          <div class="footer_home">
+            <span class="footer_home_logo">
+              <a href="#" class="footer_logo_link">
+                <i class="fa-solid fa-house"></i>
+              </a>
+            </span>
+            <span class="footer_name"> Home </span>
+          </div>
+          <div class="footer_search">
+            <span class="footer_search_logo">
+              <a href="#" class="footer_logo_link">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </span>
+            <span class="footer_name"> Search </span>
+          </div>
+          <div class="footer_library">
+            <span class="footer_library_logo">
+              <a href="#" class="footer_logo_link">
+                <img
+                  id="hover_library_img"
+                  src="https://img.icons8.com/sf-black-filled/64/000000/music-library.png"
+                  style="width: 21px; filter: contrast(0)"
+                />
+              </a>
+            </span>
+            <span class="footer_name"> Library </span>
+          </div>
+        </div>
+      </footer>
+      <!-- start main tag here  -->
+      <div class="center_div">
+        <!-- div tag for dynamic greeting  -->
+        <div class="greeting_and_mobile_icon_div">
+          <div class="greeting_div"></div>
+          <div class="icons_for_mobile">
+            <div>
+              <span>
+                <a href="#" class="mobile_icons_link">
+                  <img
+                    src="https://img.icons8.com/material-rounded/24/000000/bell--v1.png"
+                    id="notification_bell_icon"
+                    style="width: 21px; filter: contrast(0)"
+                  /> </a
+              ></span>
+              <span>
+                <a href="#" class="mobile_icons_link"
+                  ><img
+                    src="https://img.icons8.com/ios-glyphs/30/000000/delivery-time.png"
+                    id="recent_play_icon"
+                    style="width: 21px; filter: contrast(0)"
+                /></a>
+              </span>
+              <span>
+                <a href="#" class="mobile_icons_link">
+                  <img
+                    src="https://img.icons8.com/external-xnimrodx-lineal-xnimrodx/64/000000/external-setting-advertising-xnimrodx-lineal-xnimrodx-3.png"
+                    id="setting_icon"
+                    style="width: 21px; filter: contrast(0)"
+                  />
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <!-- recent played container -->
+        <div class="recent_played_container">
+          <div class="recent_play_list" id="recent_play_list_one">
+            <div class="recent_play_img">
+              <img
+                src="/Media/recent_played/playlist_1.jpeg"
+                alt="playlist_1"
+              />
+            </div>
+            <div class="recent_play_name"><span>Liked Song</span></div>
+            <a href="#" class="play_button" id="play_button_one"
+              ><i class="fa-solid fa-play"></i
+            ></a>
+          </div>
+          <div class="recent_play_list" id="recent_play_list_two">
+            <div class="recent_play_img">
+              <img src="/Media/recent_played/playlist_2.jpg" alt="playlist_2" />
+            </div>
+            <div class="recent_play_name"><span>Mix playlist</span></div>
+            <a href="#" class="play_button" id="play_button_two"
+              ><i class="fa-solid fa-play"></i
+            ></a>
+          </div>
+          <div class="recent_play_list" id="recent_play_list3">
+            <div class="recent_play_img">
+              <img src="/Media/recent_played/playlist_3.jpg" alt="playlist_3" />
+            </div>
+            <div class="recent_play_name"><span>Love Aaj Kal</span></div>
+            <a href="#" class="play_button" id="play_button3"
+              ><i class="fa-solid fa-play"></i
+            ></a>
+          </div>
+          <div class="recent_play_list" id="recent_play_list4">
+            <div class="recent_play_img">
+              <img src="/Media/recent_played/playlist_4.jpg" alt="playlist_4" />
+            </div>
+            <div class="recent_play_name"><span>Chill station</span></div>
+            <a href="#" class="play_button" id="play_button4"
+              ><i class="fa-solid fa-play"></i
+            ></a>
+          </div>
+          <div class="recent_play_list" id="recent_play_list5">
+            <div class="recent_play_img">
+              <img src="/Media/recent_played/playlist_5.jpg" alt="playlist_5" />
+            </div>
+            <div class="recent_play_name"><span>Jatt Brothers</span></div>
+            <a href="#" class="play_button" id="play_button5"
+              ><i class="fa-solid fa-play"></i
+            ></a>
+          </div>
+          <div class="recent_play_list" id="recent_play_list6">
+            <div class="recent_play_img">
+              <img src="/Media/recent_played/playlist_6.jpg" alt="playlist_6" />
+            </div>
+            <div class="recent_play_name"><span>Tanmaya Mix</span></div>
+            <a href="#" class="play_button" id="play_button6"
+              ><i class="fa-solid fa-play"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -320,7 +320,7 @@ body > .body_header > .navbar {
 .sidebar_playlist_div > .dynamic_playlist {
   background-color: var(--container-background-color);
   border-radius: var(--border-radius-card);
-  height: 73vh;
+  height: 76vh;
   overflow-y: scroll;
 }
 

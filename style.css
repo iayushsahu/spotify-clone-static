@@ -1,7 +1,7 @@
 /* root element for define css variables */
 :root {
-  --body-background-image: url("/Media/Background/main_bg.jpg");
-  --playlist-background-image: url("/Media/Background/sec_bg.jpg");
+  --body-background-image: url("https://github.com/iayushsahu/spotify-clone-static/blob/main/Media/Background/main_bg.jpg?raw=true");
+  --playlist-background-image: url("https://github.com/iayushsahu/spotify-clone-static/blob/main/Media/Background/sec_bg.jpg?raw=true");
   --header-background-color: #000;
   --container-background-color: #121212;
   --sidebar-text-color: #b7b7b7;

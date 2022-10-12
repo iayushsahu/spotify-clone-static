@@ -11,187 +11,131 @@ let greeting =
 container.innerHTML = `<h1>${greeting}</h1>`;
 
 document.getElementById("recent_play_list_one").onmouseover = function () {
-  mouseOver_one();
+  document.getElementById("play_button_one").style.visibility = "visible";
 };
 document.getElementById("recent_play_list_one").onmouseout = function () {
-  mouseOut_one();
-};
-
-function mouseOver_one() {
-  document.getElementById("play_button_one").style.visibility = "visible";
-}
-
-function mouseOut_one() {
   document.getElementById("play_button_one").style.visibility = "hidden";
-}
-
-
-
-
+};
 
 document.getElementById("recent_play_list_two").onmouseover = function () {
-  mouseOver_two();
+  document.getElementById("play_button_two").style.visibility = "visible";
 };
 document.getElementById("recent_play_list_two").onmouseout = function () {
-  mouseOut_two();
-};
-
-function mouseOver_two() {
-  document.getElementById("play_button_two").style.visibility = "visible";
-}
-
-function mouseOut_two() {
   document.getElementById("play_button_two").style.visibility = "hidden";
-}
-
-
-
-
+};
 
 document.getElementById("recent_play_list3").onmouseover = function () {
-  mouseOver_three();
+  document.getElementById("play_button3").style.visibility = "visible";
 };
 document.getElementById("recent_play_list3").onmouseout = function () {
-  mouseOut_three();
-};
-
-function mouseOver_three() {
-  document.getElementById("play_button3").style.visibility = "visible";
-}
-
-function mouseOut_three() {
   document.getElementById("play_button3").style.visibility = "hidden";
-}
-
-
-
-
+};
 
 document.getElementById("recent_play_list4").onmouseover = function () {
-  mouseOver_four();
+  document.getElementById("play_button4").style.visibility = "visible";
 };
 document.getElementById("recent_play_list4").onmouseout = function () {
-  mouseOut_four();
-};
-
-function mouseOver_four() {
-  document.getElementById("play_button4").style.visibility = "visible";
-}
-
-function mouseOut_four() {
   document.getElementById("play_button4").style.visibility = "hidden";
-}
-
-
-
-
+};
 
 document.getElementById("recent_play_list5").onmouseover = function () {
-  mouseOver_five();
+  document.getElementById("play_button5").style.visibility = "visible";
 };
 document.getElementById("recent_play_list5").onmouseout = function () {
-  mouseOut_five();
-};
-
-function mouseOver_five() {
-  document.getElementById("play_button5").style.visibility = "visible";
-}
-
-function mouseOut_five() {
   document.getElementById("play_button5").style.visibility = "hidden";
-}
-
-
-
-
+};
 
 document.getElementById("recent_play_list6").onmouseover = function () {
-  mouseOver_six();
+  document.getElementById("play_button6").style.visibility = "visible";
 };
 document.getElementById("recent_play_list6").onmouseout = function () {
-  mouseOut_six();
-};
-
-function mouseOver_six() {
-  document.getElementById("play_button6").style.visibility = "visible";
-}
-
-function mouseOut_six() {
   document.getElementById("play_button6").style.visibility = "hidden";
-}
-
-
+};
 
 document.getElementById("hover_library_img").onmouseover = function () {
-  mouseOver_img();
+  document.getElementById("hover_library_img").style.filter = "invert(1)";
 };
 document.getElementById("hover_library_img").onmouseout = function () {
-  mouseOut_img();
-};
-
-function mouseOver_img() {
-  document.getElementById("hover_library_img").style.filter = "invert(1)";
-}
-
-function mouseOut_img() {
   document.getElementById("hover_library_img").style.filter = "contrast(0)";
-}
-
-
+};
 
 document.getElementById("notification_bell_icon").onmouseover = function () {
-  mouseOver_notification_bell_icon();
+  document.getElementById("notification_bell_icon").style.filter = "invert(1)";
 };
 document.getElementById("notification_bell_icon").onmouseout = function () {
-  mouseOut_notification_bell_icon();
+  document.getElementById("notification_bell_icon").style.filter =
+    "contrast(0)";
 };
-
-function mouseOver_notification_bell_icon() {
-  document.getElementById("notification_bell_icon").style.filter = "invert(1)";
-}
-
-function mouseOut_notification_bell_icon() {
-  document.getElementById("notification_bell_icon").style.filter = "contrast(0)";
-}
-
-
 
 document.getElementById("recent_play_icon").onmouseover = function () {
-  mouseOver_recent_play_icon();
+  document.getElementById("recent_play_icon").style.filter = "invert(1)";
 };
 document.getElementById("recent_play_icon").onmouseout = function () {
-  mouseOut_recent_play_icon();
-};
-
-function mouseOver_recent_play_icon() {
-  document.getElementById("recent_play_icon").style.filter = "invert(1)";
-}
-
-function mouseOut_recent_play_icon() {
   document.getElementById("recent_play_icon").style.filter = "contrast(0)";
-}
-
-
+};
 
 document.getElementById("setting_icon").onmouseover = function () {
-  mouseOver_setting_icon();
+  document.getElementById("setting_icon").style.filter = "invert(1)";
 };
 document.getElementById("setting_icon").onmouseout = function () {
-  mouseOut_setting_icon();
+  document.getElementById("setting_icon").style.filter = "contrast(0)";
 };
 
-function mouseOver_setting_icon() {
-  document.getElementById("setting_icon").style.filter = "invert(1)";
+const element = document.querySelector(".top_mix_playlist_play_button");
+element.classList.add(
+  "animate__animated",
+  "animate__fadeInUp",
+  "animate__faster"
+);
+
+document.querySelector(".top_mix_playlist1").onmouseover = function () {
+  document.querySelector(
+    ".top_mix_playlist_play_button_wrapper1"
+  ).style.display = "block";
+};
+
+document.querySelector(".top_mix_playlist1").onmouseout = function () {
+  document.querySelector(
+    ".top_mix_playlist_play_button_wrapper1"
+  ).style.display = "none";
+};
+
+document.getElementById("song_like").onclick = () => {
+  document.getElementById(
+    "song_like"
+  ).innerHTML = `<ion-icon name="heart"></ion-icon>`;
+};
+
+
+const playerButton = document.getElementById("play_pause"),
+  audio = document.querySelector("audio"),
+  playIcon = `<ion-icon name="play" style="color: var(--icons-color);"></ion-icon>`,
+  pauseIcon = `<ion-icon style="color: var(--icons-color);" name="pause"></ion-icon>`;
+
+  function toggleAudio () {
+    if (audio.paused) {
+      audio.play();
+      playerButton.innerHTML = pauseIcon;
+    } else {
+      audio.pause();
+      playerButton.innerHTML = playIcon;
+    }
+  }
+  playerButton.addEventListener('click', toggleAudio);
+
+  function audioEnded () {
+    playerButton.innerHTML = playIcon;
+  }
+  
+  audio.onended = audioEnded;
+
+const timeline = document.querySelector(".timeline");
+function changeTimelinePosition () {
+  const percentagePosition = (100*audio.currentTime) / audio.duration;
+  timeline.style.backgroundSize = `${percentagePosition}% 100%`;
+  timeline.value = percentagePosition;
 }
-
-function mouseOut_setting_icon() {
-  document.getElementById("setting_icon").style.filter = "contrast(0)";
-}
-
-
-
-
-
+audio.ontimeupdate = changeTimelinePosition;
 
 
 

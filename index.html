@@ -24,6 +24,11 @@
       src="https://kit.fontawesome.com/e0d3b694ff.js"
       crossorigin="anonymous"
     ></script>
+    <!-- link animated.style for using pre-built animation -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <!-- start body here  -->
   <body>
@@ -179,34 +184,77 @@
       </aside>
       <!-- down list for mobile devices -->
       <footer class="footer_list_container">
-        <div class="footer_list">
-          <div class="footer_home">
-            <span class="footer_home_logo">
-              <a href="#" class="footer_logo_link">
-                <i class="fa-solid fa-house"></i>
-              </a>
-            </span>
-            <span class="footer_name"> Home </span>
+        <!-- player song information -->
+        <div class="player_section_container">
+          <div class="player_section_wrapper">
+            <div class="player_section">
+              <div class="player_song_info">
+                <div class="player_song_img">
+                  <span
+                    ><img
+                      src="https://i.scdn.co/image/ab67616d00004851d5bc8c60d74c017ef2cfca14"
+                      alt="all we are"
+                    />
+                  </span>
+                </div>
+                <div class="player_song_name">
+                  <span class="song_name">Rasiya</span>
+                  <span class="song_description"
+                    >Pritam, Shreya Ghoshal, Tushar Joshi</span
+                  >
+                </div>
+              </div>
+              <div class="player_status_info">
+                <span class="player_like" id="song_like"
+                  ><ion-icon name="heart-outline"></ion-icon
+                ></span>
+                <button class="player_control" id="play_pause">
+                  <ion-icon
+                    name="play"
+                    style="color: var(--icons-color)"
+                  ></ion-icon>
+                </button>
+              </div>
+              <div class="player_song_timeliner">
+                <input type="range" class="timeline" max="100" value="0" />
+              </div>
+            </div>
           </div>
-          <div class="footer_search">
-            <span class="footer_search_logo">
-              <a href="#" class="footer_logo_link">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </a>
-            </span>
-            <span class="footer_name"> Search </span>
-          </div>
-          <div class="footer_library">
-            <span class="footer_library_logo">
-              <a href="#" class="footer_logo_link">
-                <img
-                  id="hover_library_img"
-                  src="https://img.icons8.com/sf-black-filled/64/000000/music-library.png"
-                  style="width: 21px; filter: contrast(0)"
-                />
-              </a>
-            </span>
-            <span class="footer_name"> Library </span>
+        </div>
+        <div style="display: none">
+          <audio controls src="/Media/music/rasiya.mp3"></audio>
+        </div>
+        <!-- mobile navigation menu -->
+        <div class="footer_navigation_container">
+          <div class="footer_list">
+            <div class="footer_home">
+              <span class="footer_home_logo">
+                <a href="#" class="footer_logo_link">
+                  <i class="fa-solid fa-house"></i>
+                </a>
+              </span>
+              <span class="footer_name"> Home </span>
+            </div>
+            <div class="footer_search">
+              <span class="footer_search_logo">
+                <a href="#" class="footer_logo_link">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+              </span>
+              <span class="footer_name"> Search </span>
+            </div>
+            <div class="footer_library">
+              <span class="footer_library_logo">
+                <a href="#" class="footer_logo_link">
+                  <img
+                    id="hover_library_img"
+                    src="https://img.icons8.com/sf-black-filled/64/000000/music-library.png"
+                    style="width: 21px; filter: contrast(0)"
+                  />
+                </a>
+              </span>
+              <span class="footer_name"> Library </span>
+            </div>
           </div>
         </div>
       </footer>
@@ -323,13 +371,16 @@
         <!-- your top mix playlist -->
         <div class="top_mix_playlist_heading">
           <h2><a href="#">Your top mix</a></h2>
-          <a href="#">see all</a>
+          <a href="#"
+            >see all
+            <span
+              ><ion-icon name="arrow-forward-circle-outline"></ion-icon></span
+          ></a>
         </div>
         <div class="your_top_mix_playlist_container">
           <div class="your_top_mix_playlist_wrapper">
-            
-            <!-- playlist -->
-            <div class="top_mix_playlist">
+            <!-- playlist 1-->
+            <div class="top_mix_playlist top_mix_playlist1">
               <div class="top_mix_playlist_poster">
                 <span
                   ><img
@@ -344,7 +395,10 @@
               <div class="top_mix_playlist_description">
                 <div>chen, yana, chanyeol and more</div>
               </div>
-              <div class="top_mix_playlist_play_button_wrapper">
+              <div
+                class="top_mix_playlist_play_button_wrapper top_mix_playlist_play_button_wrapper1"
+                style="display: none"
+              >
                 <a
                   href="#"
                   class="top_mix_playlist_play_button"
@@ -353,586 +407,194 @@
                 ></a>
               </div>
             </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            <!-- playlist -->
-            <div class="top_mix_playlist">
-              <div class="top_mix_playlist_poster">
-                <span
-                  ><img
-                    src="https://seed-mix-image.spotifycdn.com/v6/img/k_pop/0UEP2XBR9aC5NBKcAKnBIq/en/default"
-                    alt="top mix list"
-                  />
-                </span>
-              </div>
-              <div class="top_mix_playlist_name">
-                <div>K-Pop Mix</div>
-              </div>
-              <div class="top_mix_playlist_description">
-                <div>chen, yana, chanyeol and more</div>
-              </div>
-              <div class="top_mix_playlist_play_button_wrapper">
-                <a
-                  href="#"
-                  class="top_mix_playlist_play_button"
-                  id="top_mix_play_button"
-                  ><i class="fa-solid fa-play"></i
-                ></a>
-              </div>
-            </div>
-            <!-- playlist end -->
-            
-            
 
+            <!-- playlist 4 -->
+            <div class="top_mix_playlist top_mix_playlist4">
+              <div class="top_mix_playlist_poster">
+                <span
+                  ><img
+                    src="https://seed-mix-image.spotifycdn.com/v6/img/romantic/76fuWYgIf3TVIopTs3vaJ6/en/default"
+                    alt="top mix list"
+                  />
+                </span>
+              </div>
+              <div class="top_mix_playlist_name">
+                <div>Romantic Mix</div>
+              </div>
+              <div class="top_mix_playlist_description">
+                <div>Amaal Mallik, Arman Mallik And Kishore Kumar</div>
+              </div>
+              <div
+                class="top_mix_playlist_play_button_wrapper top_mix_playlist_play_button_wrapper4"
+                style="display: none"
+              >
+                <a
+                  href="#"
+                  class="top_mix_playlist_play_button"
+                  id="top_mix_play_button"
+                  ><i class="fa-solid fa-play"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- playlist 7 -->
+            <div class="top_mix_playlist top_mix_playlist7">
+              <div class="top_mix_playlist_poster">
+                <span
+                  ><img
+                    src="https://mosaic.scdn.co/300/ab67616d00001e0246b1b675145743583384dc24ab67616d00001e0261694f071d402a10931d671eab67616d00001e02cdf7d1d8ff13c3360a8c033dab67616d00001e02df2fdeac8ff21691c02ece78"
+                    alt="top mix list"
+                  />
+                </span>
+              </div>
+              <div class="top_mix_playlist_name">
+                <div>Acoustic Mix</div>
+              </div>
+              <div class="top_mix_playlist_description">
+                <div>Anuv Jain, Tanmaya Mix and shikhar saxena</div>
+              </div>
+              <div
+                class="top_mix_playlist_play_button_wrapper top_mix_playlist_play_button_wrapper7"
+                style="display: none"
+              >
+                <a
+                  href="#"
+                  class="top_mix_playlist_play_button"
+                  id="top_mix_play_button"
+                  ><i class="fa-solid fa-play"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- playlist 6 -->
+            <div class="top_mix_playlist top_mix_playlist6">
+              <div class="top_mix_playlist_poster">
+                <span
+                  ><img
+                    src="https://mosaic.scdn.co/300/ab67616d00001e02a2ef89ae0f8d1848081c1449ab67616d00001e02a48a5f9f08675b848fa4a01dab67616d00001e02da50894e074ecd5ce61de0a1ab67616d00001e02ff1cda069aac9352c258f8d1"
+                    alt="top mix list"
+                  />
+                </span>
+              </div>
+              <div class="top_mix_playlist_name">
+                <div>Sad Mix</div>
+              </div>
+              <div class="top_mix_playlist_description">
+                <div>Arjit Singh, Madhur sharma and Jubin Nautiyal</div>
+              </div>
+              <div
+                class="top_mix_playlist_play_button_wrapper top_mix_playlist_play_button_wrapper6"
+                style="display: none"
+              >
+                <a
+                  href="#"
+                  class="top_mix_playlist_play_button"
+                  id="top_mix_play_button"
+                  ><i class="fa-solid fa-play"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- playlist 5 -->
+            <div class="top_mix_playlist top_mix_playlist5">
+              <div class="top_mix_playlist_poster">
+                <span
+                  ><img
+                    src="https://i.scdn.co/image/ab67706f00000002a0cedbd7f585bb478d472f8e"
+                    alt="top mix list"
+                  />
+                </span>
+              </div>
+              <div class="top_mix_playlist_name">
+                <div>safar Mix</div>
+              </div>
+              <div class="top_mix_playlist_description">
+                <div>Arjit Singh, Ankit Tiwari And Jubin Nautiyal</div>
+              </div>
+              <div
+                class="top_mix_playlist_play_button_wrapper top_mix_playlist_play_button_wrapper5"
+                style="display: none"
+              >
+                <a
+                  href="#"
+                  class="top_mix_playlist_play_button"
+                  id="top_mix_play_button"
+                  ><i class="fa-solid fa-play"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- playlist 2 -->
+            <div class="top_mix_playlist top_mix_playlist2">
+              <div class="top_mix_playlist_poster">
+                <span
+                  ><img
+                    src="https://seed-mix-image.spotifycdn.com/v6/img/chill/54mm1vGOZ4DXDYhCQb6niX/en/default"
+                    alt="top mix list"
+                  />
+                </span>
+              </div>
+              <div class="top_mix_playlist_name">
+                <div>Chill Mix</div>
+              </div>
+              <div class="top_mix_playlist_description">
+                <div>Rude Boy, Luca, Troye Sivan And More</div>
+              </div>
+              <div
+                class="top_mix_playlist_play_button_wrapper top_mix_playlist_play_button_wrapper2"
+                style="display: none"
+              >
+                <a
+                  href="#"
+                  class="top_mix_playlist_play_button"
+                  id="top_mix_play_button"
+                  ><i class="fa-solid fa-play"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- playlist 3 -->
+            <div class="top_mix_playlist top_mix_playlist3">
+              <div class="top_mix_playlist_poster">
+                <span
+                  ><img
+                    src="https://seed-mix-image.spotifycdn.com/v6/img/pop/1XgFuvRd7r5g0h844A5ZUQ/en/default"
+                    alt="top mix list"
+                  />
+                </span>
+              </div>
+              <div class="top_mix_playlist_name">
+                <div>Pop Mix</div>
+              </div>
+              <div class="top_mix_playlist_description">
+                <div>Take That shawn Mendes, Mokita And More</div>
+              </div>
+              <div
+                class="top_mix_playlist_play_button_wrapper top_mix_playlist_play_button_wrapper3"
+                style="display: none"
+              >
+                <a
+                  href="#"
+                  class="top_mix_playlist_play_button"
+                  id="top_mix_play_button"
+                  ><i class="fa-solid fa-play"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- playlist end -->
           </div>
         </div>
       </div>
     </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
     <script src="main.js"></script>
   </body>
 </html>

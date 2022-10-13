@@ -10,11 +10,11 @@ let greeting =
     : "Good Night";
 container.innerHTML = `<h1>${greeting}</h1>`;
 
-document.querySelector(".play_button_one").onmouseover = function () {
-  document.getElementById("play_button_one").style.display = "block";
+document.getElementById("recent_play_list_one").onmouseover = function () {
+  document.getElementById("play_button_one").style.visibility = "visible";
 };
-document.querySelector(".play_button_one").onmouseout = function () {
-  document.getElementById("play_button_one").style.display = "none";
+document.getElementById("recent_play_list_one").onmouseout = function () {
+  document.getElementById("play_button_one").style.visibility = "hidden";
 };
 
 document.getElementById("recent_play_list_two").onmouseover = function () {

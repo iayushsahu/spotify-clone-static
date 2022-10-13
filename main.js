@@ -10,11 +10,11 @@ let greeting =
     : "Good Night";
 container.innerHTML = `<h1>${greeting}</h1>`;
 
-document.getElementById("recent_play_list_one").onmouseover = function () {
-  document.getElementById("play_button_one").style.visibility = "visible";
+document.querySelector(".play_button_one").onmouseover = function () {
+  document.getElementById("play_button_one").style.display = "block";
 };
-document.getElementById("recent_play_list_one").onmouseout = function () {
-  document.getElementById("play_button_one").style.visibility = "hidden";
+document.querySelector(".play_button_one").onmouseout = function () {
+  document.getElementById("play_button_one").style.display = "none";
 };
 
 document.getElementById("recent_play_list_two").onmouseover = function () {
@@ -51,6 +51,7 @@ document.getElementById("recent_play_list6").onmouseover = function () {
 document.getElementById("recent_play_list6").onmouseout = function () {
   document.getElementById("play_button6").style.visibility = "hidden";
 };
+
 
 document.getElementById("hover_library_img").onmouseover = function () {
   document.getElementById("hover_library_img").style.filter = "invert(1)";
@@ -222,6 +223,108 @@ document.querySelector(".artist_div7").onmouseover = function () {
 };
 document.querySelector(".artist_div7").onmouseout = function () {
   document.querySelector(".artist_div_btn_wrapper7").style.display = "none";
+};
+
+// you like playlist mouse Event
+
+document.querySelector(".you_like_div1").onmouseover = function () {
+  document.querySelector(".you_like_btn_wrapper1").style.display = "block";
+};
+document.querySelector(".you_like_div1").onmouseout = function () {
+  document.querySelector(".you_like_btn_wrapper1").style.display = "none";
+};
+
+document.querySelector(".you_like_div2").onmouseover = function () {
+  document.querySelector(".you_like_btn_wrapper2").style.display = "block";
+};
+document.querySelector(".you_like_div2").onmouseout = function () {
+  document.querySelector(".you_like_btn_wrapper2").style.display = "none";
+};
+
+document.querySelector(".you_like_div3").onmouseover = function () {
+  document.querySelector(".you_like_btn_wrapper3").style.display = "block";
+};
+document.querySelector(".you_like_div3").onmouseout = function () {
+  document.querySelector(".you_like_btn_wrapper3").style.display = "none";
+};
+
+document.querySelector(".you_like_div4").onmouseover = function () {
+  document.querySelector(".you_like_btn_wrapper4").style.display = "block";
+};
+document.querySelector(".you_like_div4").onmouseout = function () {
+  document.querySelector(".you_like_btn_wrapper4").style.display = "none";
+};
+
+document.querySelector(".you_like_div5").onmouseover = function () {
+  document.querySelector(".you_like_btn_wrapper5").style.display = "block";
+};
+document.querySelector(".you_like_div5").onmouseout = function () {
+  document.querySelector(".you_like_btn_wrapper5").style.display = "none";
+};
+
+document.querySelector(".you_like_div6").onmouseover = function () {
+  document.querySelector(".you_like_btn_wrapper6").style.display = "block";
+};
+document.querySelector(".you_like_div6").onmouseout = function () {
+  document.querySelector(".you_like_btn_wrapper6").style.display = "none";
+};
+
+document.querySelector(".you_like_div7").onmouseover = function () {
+  document.querySelector(".you_like_btn_wrapper7").style.display = "block";
+};
+document.querySelector(".you_like_div7").onmouseout = function () {
+  document.querySelector(".you_like_btn_wrapper7").style.display = "none";
+};
+
+// Mood playlist mouse Event
+
+document.querySelector(".mood_playlist1").onmouseover = function () {
+  document.querySelector(".mood_playlist_btn_wrapper1").style.display = "block";
+};
+document.querySelector(".mood_playlist1").onmouseout = function () {
+  document.querySelector(".mood_playlist_btn_wrapper1").style.display = "none";
+};
+
+document.querySelector(".mood_playlist2").onmouseover = function () {
+  document.querySelector(".mood_playlist_btn_wrapper2").style.display = "block";
+};
+document.querySelector(".mood_playlist2").onmouseout = function () {
+  document.querySelector(".mood_playlist_btn_wrapper2").style.display = "none";
+};
+
+document.querySelector(".mood_playlist3").onmouseover = function () {
+  document.querySelector(".mood_playlist_btn_wrapper3").style.display = "block";
+};
+document.querySelector(".mood_playlist3").onmouseout = function () {
+  document.querySelector(".mood_playlist_btn_wrapper3").style.display = "none";
+};
+
+document.querySelector(".mood_playlist4").onmouseover = function () {
+  document.querySelector(".mood_playlist_btn_wrapper4").style.display = "block";
+};
+document.querySelector(".mood_playlist4").onmouseout = function () {
+  document.querySelector(".mood_playlist_btn_wrapper4").style.display = "none";
+};
+
+document.querySelector(".mood_playlist5").onmouseover = function () {
+  document.querySelector(".mood_playlist_btn_wrapper5").style.display = "block";
+};
+document.querySelector(".mood_playlist5").onmouseout = function () {
+  document.querySelector(".mood_playlist_btn_wrapper5").style.display = "none";
+};
+
+document.querySelector(".mood_playlist6").onmouseover = function () {
+  document.querySelector(".mood_playlist_btn_wrapper6").style.display = "block";
+};
+document.querySelector(".mood_playlist6").onmouseout = function () {
+  document.querySelector(".mood_playlist_btn_wrapper6").style.display = "none";
+};
+
+document.querySelector(".mood_playlist7").onmouseover = function () {
+  document.querySelector(".mood_playlist_btn_wrapper7").style.display = "block";
+};
+document.querySelector(".mood_playlist7").onmouseout = function () {
+  document.querySelector(".mood_playlist_btn_wrapper7").style.display = "none";
 };
 
 // player javascript for music play and pause

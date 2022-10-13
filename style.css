@@ -20,6 +20,8 @@
   --background-tinted-base: hsla(0,0%,100%,.07);
   --background-tinted-highlight: hsla(0,0%,100%,.1);
   --background-tinted-press: hsla(0,0%,100%,.04); */
+  --playlists-name-font_size: 1.1em;
+  --playlists-description-font_size: 0.9em;
 }
 
 /* body */
@@ -390,7 +392,23 @@ body > .body_header > .navbar {
 
 /* footer navigation */
 .footer_navigation_container {
-  background-color: var(--container-background-color);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.9251050762101716) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.9251050762101716) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.9251050762101716) 100%
+  );
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
 }
 
 .footer_navigation_container > .footer_list {
@@ -453,7 +471,6 @@ body > .body_header > .navbar {
   width: 18%;
   min-width: 220px;
   display: block;
-
 }
 
 /* fixed playlist */
@@ -650,6 +667,10 @@ body > .body_header > .navbar {
 }
 
 /* greeting and mobile icon div */
+.greeting_and_mobile_icon_div_container {
+  height: 80px;
+  z-index: 10;
+}
 .greeting_and_mobile_icon_div {
   display: flex;
   flex-direction: row;
@@ -657,7 +678,6 @@ body > .body_header > .navbar {
   justify-content: space-between;
   align-items: center;
   padding: 0px 25px;
-  height: 80px;
 }
 
 /* greeting div */
@@ -765,17 +785,21 @@ body > .body_header > .navbar {
   color: var(--main-text-color);
   font-weight: 600;
   padding-left: 10%;
-  font-size: 1.2em;
+  font-size: var(--playlists-name-font_size);
 }
 
 .top_mix_playlist_description {
   color: var(--main-text-color);
-  font-size: 1em;
+  font-size: var(--playlists-description-font_size);
   padding-left: 10%;
   text-transform: capitalize;
 }
 
-.top_mix_playlist_description > span:hover {
+.top_mix_playlist_name > div:hover {
+  text-decoration: underline;
+}
+
+.top_mix_playlist_description > div:hover {
   text-decoration: underline;
 }
 
@@ -895,13 +919,13 @@ body > .body_header > .navbar {
 .artist_name {
   color: var(--main-text-color);
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: var(--playlists-name-font_size);
   text-transform: capitalize;
 }
 
 .artist_popularity {
   color: var(--main-text-color);
-  font-size: 1em;
+  font-size: var(--playlists-description-font_size);
   text-transform: capitalize;
   padding: 5px;
   position: relative;
@@ -932,6 +956,268 @@ body > .body_header > .navbar {
 }
 
 .artist_div_btn {
+  background-color: #1ccc5b;
+  height: 50px;
+  width: 50px;
+  font-size: 18px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--header-background-color);
+}
+
+/* more of what you like */
+
+.you_like_heading {
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.you_like_heading > h2 > a {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.you_like_heading > a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  display: flex;
+}
+
+.you_like_heading > a > span {
+  padding: 2px;
+}
+
+.you_like_heading > h2 > a:hover {
+  text-decoration: underline;
+}
+
+.you_like_heading > a:hover {
+  text-decoration: underline;
+}
+
+.you_like_container {
+  margin: 0px 25px;
+}
+
+.you_like_wrapper {
+  display: flex;
+  overflow-x: auto;
+}
+
+.you_like_wrapper::-webkit-scrollbar {
+  height: 0px;
+}
+
+.you_like_div {
+  height: 274px;
+  min-width: 183px;
+  max-width: 183px;
+  margin: 0 10px 0 0;
+  border-radius: 4px;
+  background-color: var(--card-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+
+.you_like_div:hover {
+  background-color: var(--card-hover-color);
+}
+
+.you_like_poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.you_like_poster > span {
+  width: 80%;
+  margin-top: 5%;
+}
+
+.you_like_poster > span > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.you_like_info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.you_like_name {
+  color: var(--main-text-color);
+  font-weight: 600;
+  padding-left: 10%;
+  font-size: var(--playlists-name-font_size);
+  margin-bottom: 5px;
+}
+
+.you_like_description {
+  color: var(--main-text-color);
+  font-size: var(--playlists-description-font_size);
+  padding-left: 10%;
+  text-transform: capitalize;
+
+}
+
+.you_like_info > span:hover {
+  text-decoration: underline;
+}
+
+.you_like_btn_wrapper {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  display: none;
+}
+
+.you_like_btn {
+  background-color: #1ccc5b;
+  height: 50px;
+  width: 50px;
+  font-size: 18px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--header-background-color);
+}
+
+/* Mood playlist  */
+
+.mood_playlist_heading {
+  padding: 0px 25px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+}
+
+.mood_playlist_heading > h2 > a {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.mood_playlist_heading > a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  display: flex;
+}
+
+.mood_playlist_heading > a > span {
+  padding: 2px;
+}
+
+.mood_playlist_heading > h2 > a:hover {
+  text-decoration: underline;
+}
+
+.mood_playlist_heading > a:hover {
+  text-decoration: underline;
+}
+
+.mood_playlist_container {
+  margin: 0px 25px;
+}
+
+.mood_playlist_wrapper {
+  display: flex;
+  overflow-x: auto;
+}
+
+.mood_playlist_wrapper::-webkit-scrollbar {
+  height: 0px;
+}
+
+.mood_playlist {
+  height: 274px;
+  min-width: 183px;
+  max-width: 183px;
+  margin: 0 10px 0 0;
+  border-radius: 4px;
+  background-color: var(--card-color);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: flex-start;
+  cursor: pointer;
+  position: relative;
+}
+
+.mood_playlist:hover {
+  background-color: var(--card-hover-color);
+}
+
+.mood_playlist_poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mood_playlist_poster > span {
+  width: 80%;
+  margin-top: 5%;
+}
+
+.mood_playlist_poster > span > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.mood_playlist_info {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.mood_playlist_name {
+  color: var(--main-text-color);
+  font-weight: 600;
+  padding-left: 10%;
+  font-size: var(--playlists-name-font_size);
+  margin-bottom: 5px;
+}
+
+.mood_playlist_description {
+  color: var(--main-text-color);
+  font-size: var(--playlists-description-font_size);
+  padding-left: 10%;
+  text-transform: capitalize;
+
+}
+
+.mood_playlist_info > span:hover {
+  text-decoration: underline;
+}
+
+.mood_playlist_btn_wrapper {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  display: none;
+}
+
+.mood_playlist_btn {
   background-color: #1ccc5b;
   height: 50px;
   width: 50px;
@@ -1049,8 +1335,8 @@ body > .body_header > .navbar {
   }
 }
 @media screen and (max-width: 555px) {
-  .main_div{
-    margin-bottom: 133px;
+  body {
+    background: var(--container-background-color);
   }
 
   .sidebar_playlist_div {
@@ -1078,30 +1364,62 @@ body > .body_header > .navbar {
     margin-left: 95px;
   }
 
+  .icons_for_mobile_inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
   .main_div {
     margin-top: 0px;
+    margin-bottom: 134px;
+  }
+
+  .greeting_and_mobile_icon_div_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0.9251050762101716) 100%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0.9251050762101716) 100%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 1) 60%,
+      rgba(0, 0, 0, 0.9251050762101716) 100%
+    );
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
   }
 
   .greeting_and_mobile_icon_div {
+    width: 90%;
     padding: 0px 12px 0px 12px;
-    position: fixed;
-    background-color: var(--container-background-color);
   }
 
-  .recent_played_container{
-    margin-top: 77px;
+  .recent_played_container {
+    margin-top: 80px;
   }
 
   .top_mix_playlist_heading {
     padding: 0px 25px 0px 12px;
   }
 
-  .top_mix_playlist_play_button_wrapper {
-    display: none;
-  }
-
   .your_top_mix_playlist_container {
     margin: 0px 10px;
+  }
+
+  .top_mix_playlist_play_button_wrapper {
+    display: none;
   }
 
   .top_mix_playlist {
@@ -1122,11 +1440,11 @@ body > .body_header > .navbar {
     height: 0px;
   }
 
-  .artist_playlist_heading{
+  .artist_playlist_heading {
     padding: 0px 25px 0px 12px;
   }
 
-  .artist_div_btn_wrapper{
+  .artist_div_btn_wrapper {
     display: none;
   }
 
@@ -1144,5 +1462,57 @@ body > .body_header > .navbar {
 
   .artist_popularity {
     font-size: 0.8em;
+  }
+
+  .you_like_heading {
+    padding: 0px 25px 0px 12px;
+  }
+
+  .you_like_container {
+    margin: 0px 10px;
+  }
+
+  .you_like_div {
+    height: 235px;
+    width: 35%;
+  }
+
+  .you_like_name {
+    font-weight: 600;
+    font-size: 1em;
+  }
+
+  .you_like_description {
+    font-size: 0.8em;
+  }
+
+  .you_like_wrapper::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  .mood_playlist_heading {
+    padding: 0px 25px 0px 12px;
+  }
+
+  .mood_playlist_container {
+    margin: 0px 10px;
+  }
+
+  .mood_playlist {
+    height: 235px;
+    width: 35%;
+  }
+
+  .mood_playlist_name {
+    font-weight: 600;
+    font-size: 1em;
+  }
+
+  .mood_playlist_description {
+    font-size: 0.8em;
+  }
+
+  .mood_playlist_wrapper::-webkit-scrollbar {
+    height: 0px;
   }
 }

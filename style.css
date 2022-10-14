@@ -45,6 +45,9 @@ body {
 /* navbar */
 .body_header {
   display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 
 body > .body_header > .navbar {
@@ -461,7 +464,8 @@ body > .body_header > .navbar {
 .main_div {
   display: flex;
   flex-direction: row;
-  margin-top: 5px;
+  padding-top: 74px;
+  height: 100vh;
 }
 
 /* sidebar playlist div  */
@@ -1372,8 +1376,8 @@ body > .body_header > .navbar {
   }
 
   .main_div {
-    margin-top: 0px;
-    margin-bottom: 134px;
+    padding-top: 0px;
+    margin-bottom: 16vh;
   }
 
   .greeting_and_mobile_icon_div_container {
@@ -1382,6 +1386,7 @@ body > .body_header > .navbar {
     align-items: center;
     position: fixed;
     width: 100%;
+    /* margin-top: -1px; */
     background: -moz-linear-gradient(
       180deg,
       rgba(0, 0, 0, 1) 60%,

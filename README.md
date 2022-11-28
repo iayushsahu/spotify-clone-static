@@ -20,5 +20,8 @@ https://iayushsahu.github.io/spotify-clone-static
 
 
 <h1>Preview of music player</h1>
-https://user-images.githubusercontent.com/87942664/204247619-a084d6f1-a2f7-4803-a6bb-a7847d8915a6.mp4
+
+
+
+https://user-images.githubusercontent.com/87942664/204247760-a28e6718-e59c-48fa-9b32-546d32fc879d.mp4
 

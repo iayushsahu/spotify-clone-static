@@ -15,5 +15,5 @@ https://iayushsahu.github.io/spotify-clone-static
 
 <h1>Mobile user Interface</h1>
 <p align="left">
-<img width="30%" alt="tablet ui" src="https://user-images.githubusercontent.com/87942664/204242978-2e9ebe38-a292-42e6-8724-24ea728785b5.png" />
+<img width="30%" alt="tablet ui" src="https://user-images.githubusercontent.com/87942664/204246062-371f6037-9699-4487-9187-11cdc5cf65ee.jpg" />
 </p>

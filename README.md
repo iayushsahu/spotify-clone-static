@@ -17,3 +17,8 @@ https://iayushsahu.github.io/spotify-clone-static
 <p align="left">
 <img width="30%" alt="tablet ui" src="https://user-images.githubusercontent.com/87942664/204246062-371f6037-9699-4487-9187-11cdc5cf65ee.jpg" />
 </p>
+
+
+
+https://user-images.githubusercontent.com/87942664/204246498-d1b95eac-d9ba-47d3-9b76-1c3157077f01.mp4
+

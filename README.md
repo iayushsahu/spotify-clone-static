@@ -5,7 +5,7 @@ https://iayushsahu.github.io/spotify-clone-static
 
 Desktop user Interface
 
-![Desktop full site](https://user-images.githubusercontent.com/87942664/204242633-5c132535-683f-4671-9b8a-8361fd8462cb.png)
+ <img width="55%" alt="desktop ui" src="https://user-images.githubusercontent.com/87942664/204242633-5c132535-683f-4671-9b8a-8361fd8462cb.png" />
 
 Tablet user Interface
 
